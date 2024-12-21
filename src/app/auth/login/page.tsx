@@ -23,7 +23,7 @@ function Login() {
               type="email"
               name="email"
               id="email"
-              className="text-sm w-full py-3 px-2 rounded-lg bg-gray-100 outline-none"
+              className="text-sm w-full py-3 px-3 rounded-lg bg-gray-100 outline-none"
               placeholder="Enter your email"
             />
           </div>
@@ -35,7 +35,7 @@ function Login() {
               type="password"
               name="password"
               id="password"
-              className="text-sm w-full py-3 px-2 rounded-lg bg-gray-100 outline-none"
+              className="text-sm w-full py-3 px-3 rounded-lg bg-gray-100 outline-none"
               placeholder="Enter your password"
             />
           </div>
