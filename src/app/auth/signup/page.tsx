@@ -1,6 +1,28 @@
-import React from "react";
+"use client";
+import { signup } from "@/app/actions/auth";
+import { FormEvent } from "react";
 
 function Signup() {
+  const SubmitForm = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // const form = e.currentTarget;
+    // const formData = new FormData(form);
+    // const data = {
+    //   name: formData.get("name") as string,
+    //   email: formData.get("email") as string,
+    //   password: formData.get("password") as string,
+    //   confirmPassword: formData.get("confirm-password") as string,
+    // };
+
+    // signup(data)
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((error) => {
+    //     console.log(JSON.parse(error.message));
+    //   });
+  };
+
   return (
     <div className="h-full flex flex-col justify-between ">
       <div className="h-full flex flex-col items-center justify-center">
@@ -8,8 +30,20 @@ function Signup() {
           <div className="text-3xl font-bold">Sign Up</div>
           <div className="text-sm px-4">Enter you email and password to create new account!</div>
         </div>
-        <form action="" className="w-full pt-4">
+        <form onSubmit={SubmitForm} className="w-full pt-4">
           <div className="flex flex-col gap-1">
+            <label className="font-semibold text-sm" htmlFor="name">
+              Name
+            </label>
+            <input
+              type="name"
+              name="name"
+              id="name"
+              className="text-sm w-full py-3 px-3 rounded-lg bg-gray-100 outline-none"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div className="flex flex-col gap-1 mt-4">
             <label className="font-semibold text-sm" htmlFor="email">
               Email
             </label>

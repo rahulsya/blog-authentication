@@ -1,12 +1,4 @@
-"use client";
-import { signin } from "@/app/actions/auth";
-import React, { useActionState } from "react";
-
 function Login() {
-  const [state, action, pending] = useActionState(() => signin, undefined);
-  console.log(state);
-  console.log(pending);
-
   return (
     <div className="h-full flex flex-col justify-between ">
       <div className="h-full flex flex-col items-center justify-center">
@@ -14,7 +6,7 @@ function Login() {
           <div className="text-3xl font-bold">Welcome Back</div>
           <div className="text-sm px-4">Enter you email and password to access your account!</div>
         </div>
-        <form action={action} className="w-full pt-4">
+        <form action={""} className="w-full pt-4">
           <div className="flex flex-col gap-1">
             <label className="font-semibold text-sm" htmlFor="email">
               Email
